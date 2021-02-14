@@ -1,0 +1,15 @@
+.result {
+  font-size: 6vw;
+  color: red;
+}
+
+.header {
+  color: hotpink;
+  font-size: 8vw;
+  text-align: center;
+}
+.container {
+display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
