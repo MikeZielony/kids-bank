@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {AccountResultModel} from "../models/accountResult.model";
-import {IAccountResultDto} from "../models/accountResult.dto";
-import {map} from "rxjs/operators";
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {AccountResultModel} from '../models/accountResult.model';
+import {IAccountResultDto} from '../models/accountResult.dto';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
