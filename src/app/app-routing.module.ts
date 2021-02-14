@@ -8,7 +8,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/start', pathMatch: 'full'},
   {path: 'start', component: StartComponent},
   {path: 'user', component: UserComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'admin',
+  loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
 
 ];
 
