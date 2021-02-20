@@ -2,12 +2,12 @@
   {
     "id": 0,
     "name": "Sara",
-    "balance": 5
+    "balance": 10
   },
   {
     "id": 1,
     "name": "Róża",
-    "balance": 5
+    "balance": 10
   }
 
 ]
