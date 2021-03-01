@@ -12,7 +12,7 @@ import {AngularFireDatabase} from '@angular/fire/database';
 export class BalanceComponent implements OnInit {
   id: any[];
   @Input()
-  index1;
+  index;
 
   constructor(db: AngularFireDatabase) {
    db.list('/')
@@ -26,6 +26,6 @@ export class BalanceComponent implements OnInit {
   ngOnInit(): void {
   }
   getEvent($event: any): void {
-    this.index1 = $event;
+    this.index = $event;
   }
 }

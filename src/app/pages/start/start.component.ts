@@ -11,8 +11,7 @@ import {take} from 'rxjs/operators';
 })
 export class StartComponent implements OnInit {
   name = 'Kids Banka';
-  index: number;
-  index1: number;
+  index = 52;
   kidName = '';
   kidBalance = 0;
   utc = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
@@ -27,6 +26,12 @@ export class StartComponent implements OnInit {
 
   }
 
+  public getBigI(index: number) {
+   this.kidName = this.id[index].name;
+   this.kidBalance = this.id[index].balance;
+   console.log(this.name);
+   console.log("dupa");
+  }
 
   ngOnInit(): void {
     this.loadData();
@@ -42,14 +47,6 @@ export class StartComponent implements OnInit {
         this.accountResults = results;
       });
   }
-  public getBigI(index: number) {
-    this.index1 = this.index;
-    this.kidName = this.id[index].name;
-    this.kidBalance = this.id[index].balance;
-    console.log(this.name);
-    console.log("dupa");
-  }
-
 
 
 }
