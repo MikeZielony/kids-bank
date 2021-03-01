@@ -1,7 +1,8 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {AccountDataService} from '../../services/account-data.service';
 import {AccountResultModel} from '../../models/accountResult.model';
 import {take} from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-start',
@@ -10,6 +11,10 @@ import {take} from 'rxjs/operators';
 })
 export class StartComponent implements OnInit {
   name = 'Kids Banka';
+  index: number;
+  index1: number;
+  kidName = '';
+  kidBalance = 0;
   utc = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
   isTimeForThisComponent: boolean;
   public kid: string;
@@ -22,21 +27,6 @@ export class StartComponent implements OnInit {
 
   }
 
-  public myfunction(message: string) {
-
-    let i: number;
-
-    for (i = 0; i < 2; i++) {     // json length ????
-      if (message === this.accountResults[i].name) {
-        this.balance = this.accountResults[i].balance;
-        this.kid = this.accountResults[i].name;
-        this.id = i;
-
-      }
-
-    }
-
-  }
 
   ngOnInit(): void {
     this.loadData();
@@ -52,6 +42,14 @@ export class StartComponent implements OnInit {
         this.accountResults = results;
       });
   }
+  public getBigI(index: number) {
+    this.index1 = this.index;
+    this.kidName = this.id[index].name;
+    this.kidBalance = this.id[index].balance;
+    console.log(this.name);
+    console.log("dupa");
+  }
+
 
 
 }
