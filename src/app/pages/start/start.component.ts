@@ -11,42 +11,24 @@ import {take} from 'rxjs/operators';
 })
 export class StartComponent implements OnInit {
   name = 'Kids Banka';
-  index = 52;
-  kidName = '';
-  kidBalance = 0;
+  index: number = null;
   utc = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
-  isTimeForThisComponent: boolean;
-  public kid: string;
-  balance: number;
   id: number;
-  public accountResults: AccountResultModel[] = [];
 
-  constructor(private accountDataService: AccountDataService) {
-    this.isTimeForThisComponent = true;
+  constructor() {}
 
-  }
-
-  public getBigI(index: number) {
-   this.kidName = this.id[index].name;
-   this.kidBalance = this.id[index].balance;
-   console.log(this.name);
-   console.log("dupa");
+  public getIndex(kidName: string) {
+    console.log(kidName);
+    console.log(this.index);
+    if (kidName === 'Róża'){
+      this.index = 1;
+    }else if (kidName === 'Sara'){
+      this.index = 0;
+    }
+    console.log(this.index);
   }
 
   ngOnInit(): void {
-    this.loadData();
 
   }
-
-  private loadData(): void {
-    this.accountDataService.getAccountResult()
-      .pipe(
-        take(1)
-      )
-      .subscribe(results => {
-        this.accountResults = results;
-      });
-  }
-
-
 }

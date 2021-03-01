@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import {BalanceComponent} from '../pages/start/balance/balance.component';
 
 const  routes: Routes  = [
   {
@@ -15,7 +16,8 @@ const  routes: Routes  = [
       { path: 'login', component:  LoginComponent},
       { path: 'register', component:  RegisterComponent },
       { path: 'forgot-password', component:  ForgotPasswordComponent },
-      { path: 'verify-email', component:  VerifyEmailComponent }
+      { path: 'verify-email', component:  VerifyEmailComponent },
+      { path: 'balance', component: BalanceComponent}
     ]
   }
 ];

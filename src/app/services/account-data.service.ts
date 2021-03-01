@@ -17,6 +17,7 @@ export class AccountDataService {
 
  public getAccountResult(): Observable<AccountResultModel[]> {
   console.log('Works');
+ // return this.http.get<IAccountResultDto[]>('./assets/jsons/accounts.json')
   return this.http.get<IAccountResultDto[]>('./assets/jsons/accounts.json')
     .pipe(
       map(results => results.map(result => new AccountResultModel(result)))

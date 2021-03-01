@@ -1,21 +1,16 @@
 <div class="header"> {{ name }} date {{ utc }}</div>
 <div class="container">
-<img class="1" src="./assets/pictures/sara.jpg" width="100" height="100" (click)="this.getBigI(0)" />
+<img class="1" src="./assets/pictures/sara.jpg" width="100" height="100" (click)="this.getIndex('Sara')" />
 
-<img  class="2" src="./assets/pictures/roza.jpg" width="100" height="100" (click)="this.getBigI(1)" />
-
-
-
+<img  class="2" src="./assets/pictures/roza.jpg" width="100" height="100" (click)="this.getIndex('Róża')" />
 </div>
 
 <app-balance [index]="index"></app-balance>
 <p><a href="http://localhost:4200/start">reset</a></p>
 <p><a href="admin">admin</a></p>
-<p><a href="balance">balance</a></p>
 
 
-  <div class="result" *ngIf="index != null">
-    <p>{{kid}} ma na koncie :  {{balance}} PLN</p>
-   </div>
+
+
 
 

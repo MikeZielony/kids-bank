@@ -1,2 +1,11 @@
-<p>balance works!</p>
-<p> Index is : {{index}}</p>
+
+
+<!--  <li *ngFor="let i of id">{{i.name}} ma {{i.balance}} PLN</li>-->
+
+<div class="result" *ngIf="index != null">
+  <p>Stan konta</p>
+<h1>Konto numer: {{id[index].id}}</h1>
+<p> {{id[index].name}} ma {{id[index].balance}}</p>
+</div>
+
+
