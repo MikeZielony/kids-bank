@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+import 'firebase/auth';
+import 'firebase/database';
+import firebase from 'firebase/app';
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +12,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kids-bank';
+
+  constructor() {}
 }

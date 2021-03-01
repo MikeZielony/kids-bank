@@ -14,15 +14,11 @@ import {RegisterComponent} from './admin/register/register.component';
 import {ForgotPasswordComponent} from './admin/forgot-password/forgot-password.component';
 import {VerifyEmailComponent} from './admin/verify-email/verify-email.component';
 import { AdminComponent } from './admin/admin.component';
+import {environment} from '../environments/environment';
+import { BalanceComponent } from './pages/start/balance/balance.component';
+import {FormsModule} from '@angular/forms';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDfDIwQAFIe2-O09fTq561VYcp4Sl8KPCQ",
-  authDomain: "kids-bank-de6c7.firebaseapp.com",
-  projectId: "kids-bank-de6c7",
-  storageBucket: "kids-bank-de6c7.appspot.com",
-  messagingSenderId: "952861204542",
-  appId: "1:952861204542:web:b2f76458577a594b33316f"
-};
+
 
 @NgModule({
   declarations: [
@@ -34,10 +30,16 @@ const firebaseConfig = {
     RegisterComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
-    AdminComponent
+    AdminComponent,
+    BalanceComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, AppRoutingModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
