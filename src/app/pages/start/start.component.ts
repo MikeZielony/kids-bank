@@ -14,18 +14,16 @@ export class StartComponent implements OnInit {
   index: number = null;
   utc = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
   id: number;
+  topic: string;
 
   constructor() {}
 
   public getIndex(kidName: string) {
-    console.log(kidName);
-    console.log(this.index);
     if (kidName === 'Róża'){
       this.index = 1;
     }else if (kidName === 'Sara'){
       this.index = 0;
     }
-    console.log(this.index);
   }
 
   ngOnInit(): void {
