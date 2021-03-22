@@ -10,7 +10,7 @@ import {take} from 'rxjs/operators';
   styleUrls: ['./start.component.css']
 })
 export class StartComponent implements OnInit {
-  name = 'Kids Banka';
+  name = 'KiddyBanka';
   index: number = null;
   utc = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
   id: number;

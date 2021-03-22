@@ -1,10 +1,33 @@
+@font-face {
+  font-family: Letterblocks;
+  src: url(src/assets/Fonts/Letterblocks.ttf) format("opentype");
+}
+
+.header{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Letterblocks';
+}
+
 .result {
   font-size: 6vw;
-  color: red;
+  color: green;
+}
+
+
+img {
+  border-radius: 18px;
+  padding: 5px;
+
+}
+
+img:hover {
+  box-shadow: 0 0 12vw 11vw rgba(0, 255, 86, 0.5);
 }
 
 .header {
-  color: hotpink;
+  color: darkgreen;
   font-size: 8vw;
   text-align: center;
 }
@@ -13,3 +36,4 @@ display: flex;
   justify-content: center;
   justify-content: space-around;
 }
+
