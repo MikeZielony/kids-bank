@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  background: hsla(52, 100%, 63%, 1);
+
+  background: radial-gradient(circle, hsla(52, 100%, 63%, 1) 0%, hsla(324, 84%, 65%, 1) 100%);
+
+  background: -moz-radial-gradient(circle, hsla(52, 100%, 63%, 1) 0%, hsla(324, 84%, 65%, 1) 100%);
+
+  background: -webkit-radial-gradient(circle, hsla(52, 100%, 63%, 1) 0%, hsla(324, 84%, 65%, 1) 100%);
+
+}
