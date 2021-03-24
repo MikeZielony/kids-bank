@@ -473,6 +473,9 @@ Apache-2.0
  
 
 
+speak-tts
+MIT
+
 tslib
 0BSD
 Copyright (c) Microsoft Corporation.
