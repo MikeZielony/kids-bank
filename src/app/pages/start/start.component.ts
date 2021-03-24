@@ -4,6 +4,7 @@ import {AccountResultModel} from '../../models/accountResult.model';
 import {take} from 'rxjs/operators';
 
 
+
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',

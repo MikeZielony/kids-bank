@@ -14,7 +14,12 @@
 }
 
 .result {
-  color: red;
+  display: flex;
+  justify-content: space-around;
+  color: deeppink;
   font-size: 3vh;
 }
 
+img {
+  margin-left: 10px;
+}

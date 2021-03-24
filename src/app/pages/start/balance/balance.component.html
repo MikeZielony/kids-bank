@@ -1,9 +1,9 @@
 <div class="result">
 <div *ngIf="index != null">
-  <p>Stan konta</p>
+  <h1>Stan konta</h1>
 <h1>Konto numer: {{id[index].id}}</h1>
 
-  <p> {{id[index].name}} ma :  {{id[index].balance}} </p>
+  <p [ngStyle]="{'opacity': id.name ? '0.5' : '1' }"> {{id[index].name}} ma :  {{id[index].balance}} <img class="first" src="./assets/pictures/kotek.jpg" width="100" height="100" (click)="speak1()"> </p>
   </div>
 </div>
 
