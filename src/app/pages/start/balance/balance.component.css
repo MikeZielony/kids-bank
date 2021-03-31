@@ -1,10 +1,10 @@
 @font-face {
-  font-family: bar;
-  src: url(src/assets/Fonts/bar.otf) format("opentype");
+  font-family: moro;
+  src: url(src/assets/Fonts/moro.otf) format("opentype");
 }
 
 * {
-  font-family: bar;
+  font-family: moro;
 }
 
 .balance {
@@ -22,4 +22,8 @@
 
 img {
   margin-left: 10px;
+}
+
+img.kotek:hover {
+  box-shadow: 0 0 12vw 11vw rgba(0, 187, 249, 0.5);
 }
