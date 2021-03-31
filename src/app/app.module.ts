@@ -1,19 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { StartComponent } from './pages/start/start.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { UserComponent } from './pages/user/user.component';
 import {AppRoutingModule} from './app-routing.module';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
 import {LoginComponent} from './admin/login/login.component';
 import {RegisterComponent} from './admin/register/register.component';
 import {ForgotPasswordComponent} from './admin/forgot-password/forgot-password.component';
 import {VerifyEmailComponent} from './admin/verify-email/verify-email.component';
 import { AdminComponent } from './admin/admin.component';
+import {FormsModule} from "@angular/forms";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDfDIwQAFIe2-O09fTq561VYcp4Sl8KPCQ",
@@ -34,10 +32,10 @@ const firebaseConfig = {
     RegisterComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
-    BrowserModule, HttpClientModule, AppRoutingModule
+    BrowserModule, HttpClientModule, AppRoutingModule, FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
