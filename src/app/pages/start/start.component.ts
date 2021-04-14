@@ -1,7 +1,5 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
-import {AccountDataService} from '../../services/account-data.service';
-import {AccountResultModel} from '../../models/accountResult.model';
-import {take} from 'rxjs/operators';
+
 
 
 
@@ -19,7 +17,7 @@ export class StartComponent implements OnInit {
 
   constructor() {}
 
-  public getIndex(kidName: string) {
+  public getIndex(kidName: string): void {
     if (kidName === 'Róża'){
       this.index = 1;
     }else if (kidName === 'Sara'){

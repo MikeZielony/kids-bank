@@ -17,6 +17,8 @@ import { AdminComponent } from './admin/admin.component';
 import {environment} from '../environments/environment';
 import { BalanceComponent } from './pages/start/balance/balance.component';
 import {FormsModule} from '@angular/forms';
+import { PopupComponent } from './pages/popup/popup.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -31,7 +33,8 @@ import {FormsModule} from '@angular/forms';
     ForgotPasswordComponent,
     VerifyEmailComponent,
     AdminComponent,
-    BalanceComponent
+    BalanceComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import {FormsModule} from '@angular/forms';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
