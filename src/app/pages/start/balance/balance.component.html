@@ -1,8 +1,10 @@
 <div class="result">
-<div *ngIf="index != null">
-  <h1>Stan konta</h1>
-
-  <p > {{id[index].name}} ma :  {{id[index].balance }} <img class="kotek" src="./assets/pictures/kotek.jpg" width="100" height="100" (click)="speak1()"> </p>
+  <div *ngIf="index != null">
+    <h1>Stan konta</h1>
+    <img class="first" src="{{'./assets/pictures/' + start.kidName + '.jpg'}}" width="200" height="240"/>
+    <p> {{id[index].name}} ma :  {{id[index].balance }} <img class="kotek" src="./assets/pictures/kotek.jpg" width="100"
+                                                             height="100" (click)="speak1()">
+      <img class="door" src="assets/pictures/door.jpg" width="100" height="100" (click)="logout()"></p>
   </div>
 </div>
 

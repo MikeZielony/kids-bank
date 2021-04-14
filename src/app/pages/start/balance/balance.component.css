@@ -21,9 +21,13 @@
 }
 
 img {
+  border-radius: 18px;
+  padding: 5px;
   margin-left: 10px;
 }
 
-img.kotek:hover {
+img.kotek:hover, img.door:hover {
   box-shadow: 0 0 12vw 11vw rgba(0, 187, 249, 0.5);
 }
+
+

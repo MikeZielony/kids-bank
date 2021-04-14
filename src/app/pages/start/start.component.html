@@ -1,12 +1,10 @@
 <div class="header"> {{ name }}
   {{ utc }}</div>
-<br>
-<br>
 <div class="container"  >
 
-<img class="first" src="./assets/pictures/sara.jpg" width="200" height="240" (click)="this.getIndex('Sara')" />
+<img *ngIf="!isUserLogin" class="first" src="./assets/pictures/Sara.jpg" width="200" height="240" (click)="this.getIndex('Sara')" />
 
-<img  class="second" src="./assets/pictures/roza.jpg" width="200" height="240" (click)="this.getIndex('Róża')" />
+<img  *ngIf="!isUserLogin" class="second" src="./assets/pictures/Róża.jpg" width="200" height="240" (click)="this.getIndex('Róża')" />
 </div>
 
 <app-balance *ngIf="isUserLogin" [index]="index"></app-balance>
@@ -19,8 +17,9 @@
  <div class="popupOverlay"></div>
    <div class="popupContent">
    <div class="popupImage">
+     <button class="TR" (click)="logout()"> X </button>
      <div *ngFor="let image of loginPictures">
-       <img (click)="setImage(image.id)" style="width: 90px" src="{{'./assets/pictures/' + image.pic}}">
+       <img (click)="setImage(image.id)" style="width: 90px" src="{{'./assets/pictures/pass/' + image.pic}}">
      </div>
    </div>
  </div>

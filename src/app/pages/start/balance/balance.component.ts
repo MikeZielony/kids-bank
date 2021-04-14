@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import 'firebase/auth';
 import 'firebase/database';
-import firebase from 'firebase/app';
 import {AngularFireDatabase} from '@angular/fire/database';
 import Speech from 'speak-tts';
+import { StartComponent} from '../start.component';
 
 @Component({
   selector: 'app-balance',
@@ -14,9 +14,11 @@ export class BalanceComponent implements OnInit {
   id: any[];
   @Input()
   index;
+  private start: StartComponent;
 
-  constructor(db: AngularFireDatabase) {
-   db.list('/')
+  constructor(db: AngularFireDatabase, start: StartComponent) {
+    this.start = start;
+    db.list('/')
      .valueChanges().subscribe(id => {
        this.id = id;
        console.log('lista');
@@ -49,4 +51,6 @@ export class BalanceComponent implements OnInit {
       console.error('An error occurred :', e);
     });
   }
+  private logout(): void {
+      this.start.logout(); }
 }

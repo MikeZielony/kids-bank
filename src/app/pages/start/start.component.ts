@@ -17,14 +17,15 @@ export class StartComponent implements OnInit {
   topic: string;
   isAuthPopVisible = false;
   isUserLogin = false;
-  loginPictures: ILoginInterface[] = [{id: 'raz', pic: 'kotek.jpg'}, {id: 'dwa', pic: 'kotek.jpg'}, {id: 'trzy', pic: 'kotek.jpg'}];
-
+  loginPictures: ILoginInterface[] = [{id: 'Sara', pic: 'ball.png'}, {id: 'Róża', pic: 'doll.png'}, {id: 'trzy', pic: 'unicorn.png'}];
+  kidName: string;
   constructor() {
   }
 
   public getIndex(kidName: string): void {
+    this.kidName = kidName;
     this.isAuthPopVisible = true;
-    if (kidName === 'Róża') {
+    if (kidName === 'Róża' && this.isUserLogin === false) {
       this.index = 1;
     } else if (kidName === 'Sara') {
       this.index = 0;
@@ -32,16 +33,19 @@ export class StartComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.loginPictures = [...this.loginPictures]
-
+    this.loginPictures = this.loginPictures.sort((a, b) => 0.5 - Math.random());
   }
+
   public setImage(id): void {
-    if (id === 'raz') {
+    if (id === this.kidName) {
       this.isAuthPopVisible = false;
       this.isUserLogin = true;
     }
-
-}
+  }
+  public logout(): void {
+    this.isUserLogin = false;
+    this.isAuthPopVisible = false;
+  }
 }
 
 export interface ILoginInterface {
