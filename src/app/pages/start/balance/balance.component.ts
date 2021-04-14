@@ -31,17 +31,9 @@ export class BalanceComponent implements OnInit {
   getEvent($event: any): void {
     this.index = $event;
   }
-  private _init() {
-    const speech = new Speech();
-    console.log('speak');
-    speech.init({
-      volume: 0.5,
-      lang: 'pl-PL',
-      rate: 1,
-      pitch: 1.5, }); }
 
-  private speak1() {
-    this._init();
+
+  public speak1(): void {
     const speech = new Speech();
     speech.speak({
       text: this.id[this.index].name + 'ma na koncie' + this.id[this.index].balance + 'złotych',
