@@ -35,5 +35,43 @@ img:hover {
   justify-content: space-evenly;
 }
 
+.PopupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
 
+.popupOverlay {
 
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 99;
+}
+
+.popupContent {
+  width: 300px;
+  height: 300px;
+  z-index: 100;
+  background-color: aliceblue;
+}
+
+.popupImage {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

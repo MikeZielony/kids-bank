@@ -9,14 +9,23 @@
 <img  class="second" src="./assets/pictures/roza.jpg" width="200" height="240" (click)="this.getIndex('Róża')" />
 </div>
 
-<app-balance [index]="index"></app-balance>
+<app-balance *ngIf="isUserLogin" [index]="index"></app-balance>
 <!--
 <p><a href="https://mikezielony.github.io/kids-bank/">reset</a></p>
 <p><a href="admin">admin</a></p>
 -->
-
-
-
+<ng-container *ngIf="isAuthPopVisible">
+<div class="PopupContainer">
+ <div class="popupOverlay"></div>
+   <div class="popupContent">
+   <div class="popupImage">
+     <div *ngFor="let image of loginPictures">
+       <img (click)="setImage(image.id)" style="width: 90px" src="{{'./assets/pictures/' + image.pic}}">
+     </div>
+   </div>
+ </div>
+ </div>
+</ng-container>
 
 
 
