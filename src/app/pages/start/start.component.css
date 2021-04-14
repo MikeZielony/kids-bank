@@ -23,11 +23,18 @@
 img {
   border-radius: 18px;
   padding: 5px;
-
 }
 
+.block>img {
+  width: 100px;
+}
 img:hover {
-  box-shadow: 0 0 12vw 11vw rgba(0, 187, 249, 0.5);
+  box-shadow: 0 0 11vw 12vw rgba(0, 187, 249, 0.5);
+}
+
+
+.block>img:hover {
+  box-shadow: 0 0 0.5em 0.5em rgba(0, 187, 249, 0.5);
 }
 
 .container {
@@ -63,8 +70,6 @@ img:hover {
 
 .popupContent {
   border-radius: 25px;
-  width: 300px;
-  height: 300px;
   z-index: 100;
   background-color: aliceblue;
 }
@@ -82,4 +87,11 @@ img:hover {
   top: 8px;
   right: 16px;
   font-size: 18px
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  margin: 1em;
 }

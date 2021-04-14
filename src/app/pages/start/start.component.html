@@ -2,9 +2,9 @@
   {{ utc }}</div>
 <div class="container"  >
 
-<img *ngIf="!isUserLogin" class="first" src="./assets/pictures/Sara.jpg" width="200" height="240" (click)="this.getIndex('Sara')" />
+<img *ngIf="!isUserLogin" class="first" src="./assets/pictures/Sara.jpg" width="200" height="240" (click)="this.getIndex('Sara')" (mouseenter)="speak('Sara')" />
 
-<img  *ngIf="!isUserLogin" class="second" src="./assets/pictures/Róża.jpg" width="200" height="240" (click)="this.getIndex('Róża')" />
+<img  *ngIf="!isUserLogin" class="second" src="./assets/pictures/Róża.jpg" width="200" height="240" (click)="this.getIndex('Róża')" (mouseenter)="speak('Róża')" />
 </div>
 
 <app-balance *ngIf="isUserLogin" [index]="index"></app-balance>
@@ -18,8 +18,8 @@
    <div class="popupContent">
    <div class="popupImage">
      <button class="TR" (click)="logout()"> X </button>
-     <div *ngFor="let image of loginPictures">
-       <img (click)="setImage(image.id)" style="width: 90px" src="{{'./assets/pictures/pass/' + image.pic}}">
+     <div class="block">
+       <img *ngFor="let image of loginPictures" (click)="setImage(image.id)"  src="{{'./assets/pictures/pass/' + image.pic}}"/>
      </div>
    </div>
  </div>
