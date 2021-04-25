@@ -1,0 +1,97 @@
+@font-face {
+  font-family: BalonkuRegular-la1w;
+  src: url(src/assets/Fonts/BalonkuRegular-la1w.otf) format("opentype");
+}
+
+
+.header{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'BalonkuRegular-la1w';
+  color: deeppink;
+  font-size: 8vw;
+  text-align: center;
+}
+
+.result {
+  font-size: 6vw;
+
+}
+
+
+img {
+  border-radius: 18px;
+  padding: 5px;
+}
+
+.block>img {
+  width: 100px;
+}
+img:hover {
+  box-shadow: 0 0 11vw 12vw rgba(0, 187, 249, 0.5);
+}
+
+
+.block>img:hover {
+  box-shadow: 0 0 0.5em 0.5em rgba(0, 187, 249, 0.5);
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.PopupContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.popupOverlay {
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 99;
+}
+
+.popupContent {
+  border-radius: 25px;
+  z-index: 100;
+  background-color: aliceblue;
+}
+
+.popupImage {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.TR {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  margin: 1em;
+}

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: moro;
+  src: url(src/assets/Fonts/moro.otf) format("opentype");
+}
+
+* {
+  font-family: moro;
+}
+
+.balance {
+  width: 5vh;
+  height: 5vh;
+  margin-left: 10px;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  color: deeppink;
+  font-size: 3vh;
+}
+
+img {
+  border-radius: 18px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+img.kotek:hover, img.door:hover {
+  box-shadow: 0 0 12vw 11vw rgba(0, 187, 249, 0.5);
+}
+
+
+img.door {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}

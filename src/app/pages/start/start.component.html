@@ -1,0 +1,30 @@
+<div class="header"> {{ name }}
+  {{ utc }}</div>
+<div class="container"  >
+
+<img *ngIf="!isUserLogin" class="first" src="./assets/pictures/Sara.jpg" width="200" height="240" (click)="this.getIndex('Sara')" (mouseenter)="speak('Sara')" />
+
+<img  *ngIf="!isUserLogin" class="second" src="./assets/pictures/Róża.jpg" width="200" height="240" (click)="this.getIndex('Róża')" (mouseenter)="speak('Róża')" />
+</div>
+
+<app-balance *ngIf="isUserLogin" [index]="index"></app-balance>
+<!--
+<p><a href="https://mikezielony.github.io/kids-bank/">reset</a></p>
+<p><a href="admin">admin</a></p>
+-->
+<ng-container *ngIf="isAuthPopVisible">
+<div class="PopupContainer">
+ <div class="popupOverlay"></div>
+   <div class="popupContent">
+   <div class="popupImage">
+     <button class="TR" (click)="logout()"> X </button>
+     <div class="block">
+       <img *ngFor="let image of loginPictures" (click)="setImage(image.id)"  src="{{'./assets/pictures/pass/' + image.pic}}"/>
+     </div>
+   </div>
+ </div>
+ </div>
+</ng-container>
+
+
+
